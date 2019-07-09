@@ -17,7 +17,7 @@ import (
 )
 
 func main() {
-	pp := NewPSQuantile(0.5, 0.9, 0.99, 0.999)
+	pp := psqr.NewPSQuantile(0.5, 0.9, 0.99, 0.999)
 
 	pp.Append(0.013163238)
 	pp.Append(0.711542201)
