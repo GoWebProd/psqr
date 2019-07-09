@@ -176,7 +176,7 @@ func (q *Quantile) adjustHeights() {
 		} else if d <= -1 && ni2 > -1 {
 			b1 := (n2 - 1) * z1
 			b2 := (n1 + 1) * z2
-			hi := h + (b1+b2)/(n1+n2)
+			hi := h - (b1+b2)/(n1+n2)
 
 			if hm1 < hi && hi < hp1 {
 				q.heights[i] = hi
