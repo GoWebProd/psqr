@@ -37,7 +37,6 @@ func (s *PSQuantile) Quantile(val float64) float64 {
 	return s.s[s.m[val]].Value()
 }
 
-
 // P-square maitains five markers that store points.
 const nMarkers = 5
 
@@ -173,7 +172,7 @@ func (q *Quantile) adjustHeights() {
 			}
 
 			q.pos[i]++
-		} else if d <= -1 && ni2 > -1 {
+		} else if d <= -1 && ni2 > 1 {
 			b1 := (n2 - 1) * z1
 			b2 := (n1 + 1) * z2
 			hi := h - (b1+b2)/(n1+n2)
